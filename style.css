@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap');
+:root {
+
+    --main-bg-color: hsl(270, 20%, 96%);
+
+    --primary-color: #fff;
+    /* Mobil%e Colors */
+    --receive-message-bg-color: #ede5f4 ;
+    --chat-left-text-color: hsl(276, 55%, 52%);
+
+    --chat-right-bg-color: #fff;
+    --chat-right-text-color: hsl(271, 15%, 43%);
+    
+    --paragrah-text-color: hsl(270, 7%, 64%);
+
+    /* Gradients */
+    --primary-gradient: hsl(293, 100%, 63%);
+    --secondary-gradient: hsl(264, 100%, 61%);
+    --main-heading-ui-color: hsl(271, 36%, 24%);
+
+    /* Submit Button color */
+    --submit-btn-color: hsl(271, 36%, 24%);
+    --radio-btn-color: hsl(289, 100%, 72%);
+
+    /* Fonts */
+    --font-family: 'Rubik', sans-serif;
+    --font-size: 16px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* SCROLL BAR */
+::-webkit-scrollbar {
+    width: 0;
+}
+
+
+
+/* Background Design */
+    /* Background design */
+.bg-rgt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40rem;
+    width: 40%;
+    background: linear-gradient(to bottom, hsl(289, 100%, 72%), #963bfe);
+    border-bottom-right-radius: 100rem;
+}
+.bg-left {
+    display: none;
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+    padding-block: 2rem;
+}
+
+
+/* TEXT CONTENT AT THE RIGHT SIDE OF THE SCREEN */
+.text-content {
+
+    margin-block: 2rem 5rem;
+    width: 90%;
+    text-align: center;
+    margin: auto;
+
+}
+.text-content .title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 3rem;
+    font-weight: 400;
+    color:var(--main-heading-ui-color);
+}
+.text-content .describ {
+    margin-block: 2%;
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    color: var(--paragrah-text-color);
+    line-height: 1.6rem;
+}
+
+/* MOBILE UI DESIGN */
+.mobile {
+
+    position: relative;
+    background-color: var(--primary-color);
+    box-shadow: 10px 10px 70px #ccc;
+    border-radius: 2rem;
+    width: 20rem;
+    padding: 0.8rem;
+    margin: auto;
+
+}
+.main {
+
+    background-color: var(--main-bg-color);
+    border-radius: 2rem;
+
+}
+
+.header-ui {
+
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    border-radius: 1.5rem;
+    padding: 5.3% 22%;
+
+}
+.mobile .header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    padding: 12% 5% 3%;
+    background: linear-gradient(to right, #963bfe, hsl(289, 100%, 72%));
+
+}
+
+.mobile .header figure {
+
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    width: 80%;
+
+}
+.mobile .header figure img {
+
+    border: 2px solid var(--primary-color);
+    width: 14%;
+    height: 14%;
+    border-radius: 50%;
+
+}
+.mobile .header figure figcaption {
+    width: 100%;
+    color: var(--primary-color);
+}
+.mobile .header figure figcaption .user_name {
+
+    margin-bottom: 0.1rem;
+    font-size: 1.2em;
+
+}
+.user_status {
+
+    font-size: 0.8rem;
+    opacity: 0.7;
+    font-weight: 100;
+
+}
+/* End of the header section */
+
+/* Main content of the mobile ui */
+
+.container {
+
+    padding: 5% 5% 3.5rem;
+    overflow-y: scroll;
+    height: 36.5rem;
+
+}
+.container .message-box p{
+
+    max-width: 80%;
+    border-radius: 1rem;
+    padding: 3%;
+    font-family: sans-serif;
+    font-weight: 100;
+    line-height: 1.2rem;
+
+}
+
+.send,
+.receive {
+    margin-bottom: 5%;
+
+}
+.container .receive p {
+
+    color: var(--chat-left-text-color);
+    background-color: var(--receive-message-bg-color);
+    border-bottom-left-radius: 0;
+    box-shadow: -2px 2px 5px #ccccccb2;
+
+}
+
+.container .send p {
+
+    color: var(--chat-right-text-color);
+    background-color: var(--chat-right-bg-color);
+    border-bottom-right-radius: 0;
+    box-shadow: 0 2px 5px #ccccccb2;
+
+}
+.container .send {
+
+    display: flex;
+    justify-content: right;
+}
+
+.container figure img {
+
+    max-width: 20%;
+    max-height: 20%;
+    border-radius: 1rem;
+    margin-left: 5%;
+}
+
+.container .promo {
+
+    color: #fff;
+    background: linear-gradient(to right, var(--primary-gradient), var(--secondary-gradient));
+    border-radius: 1rem;
+    border-bottom-left-radius: 0;
+    box-shadow: -2px 2px 5px #ccccccb2;
+    margin-bottom: 1rem;
+    padding: 2% 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.container .promo .tickle {
+
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    border: 1px solid #fff;
+
+}
+
+.container .promo .describ {
+    width: 100%;
+}
+.container .promo .cost {
+    font-family: var(--font-family);
+    font-size: 1.3rem;
+}
+/* Message input */
+.send-message {
+
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    width: 85%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    border-radius: 5rem;
+    box-shadow: 0 0 10px #cccccc94;
+
+}
+.send-message input {
+
+    padding: 2%;
+    border: none;
+    outline: none;
+    width: 100%;
+
+}
+.send-message .submit-btn {
+    
+    width: 2rem;
+    height: 2rem;
+    background-color: #000;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+}
+.send-message .submit-btn:hover {
+    cursor: pointer;
+}
+.send-message .submit-btn:active {
+    background-color: #000000c4;
+}
+
+/* TABLET VERSION */
+/* ............. */
+
+/* LARGE VERSION */
+
+@media  screen and (min-width: 700px) {
+
+    body {
+        display: grid;
+        place-content: center;
+        height: 100vh;
+    }
+    
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+        padding: 2rem;
+        width: 100%;
+        margin: auto;
+    }
+
+    .text-content {
+
+        margin-block: 2rem 5rem;
+        width: 90%;
+        max-width: 30rem;
+        text-align: left;
+        padding-right: 2rem;
+        margin: auto;
+    
+    }
+    /* MOBILE UI DESIGN */
+    .mobile {
+
+        position: relative;
+        background-color: var(--primary-color);
+        box-shadow: 10px 10px 70px #ccc;
+        border-radius: 2rem;
+        width: 25rem;
+        padding: 1rem;
+        margin: auto;
+
+    }
+
+
+    /* Background design */
+    .bg-rgt {
+        position: absolute;
+        top: 0;
+        left: -5.5rem;
+        height: 40rem;
+        width: 30rem;
+        background: linear-gradient(to bottom, hsl(289, 100%, 72%), #963bfe);
+        border-bottom-left-radius: 25rem;
+        border-bottom-right-radius: 25rem;
+    }
+    .bg-left {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 40rem;
+        width: 15rem;
+        background: linear-gradient(to bottom, hsl(289, 100%, 72%), #963bfe);
+        opacity: 0.05;
+        border-top-left-radius: 50rem;
+
+    }
+}
+
+@media screen and (min-height: 100px) and (max-height: 670px) {
+    .mobile {
+        width: 18rem;
+    }
+    .container {
+        height: 30rem;
+    }
+}
+
+
