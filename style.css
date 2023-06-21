@@ -350,7 +350,7 @@ main {
         position: absolute;
         top: 0;
         left: -5.5rem;
-        height: 40rem;
+        height: 80%;
         width: 30rem;
         background: linear-gradient(to bottom, hsl(289, 100%, 72%), #963bfe);
         border-bottom-left-radius: 25rem;
@@ -361,7 +361,7 @@ main {
         position: absolute;
         bottom: 0;
         right: 0;
-        height: 40rem;
+        height: 80%;
         width: 15rem;
         background: linear-gradient(to bottom, hsl(289, 100%, 72%), #963bfe);
         opacity: 0.05;
